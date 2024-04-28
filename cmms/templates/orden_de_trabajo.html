@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section class="orden">
+    <div class="container  p-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Orden de trabajo</h1>
+
+                <form method="post" action="{% url 'cmms:orden' %}">
+                    {% for field in form %}
+                    {{ field.label_tag }}
+                    {{ field }}
+
+                    {% if field.errors %}
+                    {{ field.errors }}
+                    {% endif %}
+
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary mt-4 ">Register</button>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <!-- Include your chart code here -->
+                {{ context|safe }}
+            </div>
+            <div class="col-6">
+                <!-- Include your chart code here -->
+                {{ context2|safe }}
+            </div>
+            <h3 class="text-center">Se han registrado mantenimientos en las fechas:</h3>
+
+            <ol class="list-group list-group-numbered">
+                {% for orden in mantenimientos %}
+                <li class="list-group-item">{{ orden.fecha }}: <em>{{ orden.actividad }}</em> , <strong>{{ orden.tipo }}</strong>  </li>
+                {% endfor %}
+              </ol>
+
+            <
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section>
+    <div class="container-fluid p-5">
+        <div class="row">
+
+          <div class="col">
+            <!-- Área principal de contenido -->
+            <div class="content">
+              <h1 class="text-center mb-5">Bienvenido a tu Panel de Control</h1>
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- Tarjeta de ejemplo con datos -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Total de Máquinas</h5>
+                      <p class="card-text">{{ maquinas.count }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Tarjeta de ejemplo con datos -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Total de Personal</h5>
+                      <p class="card-text">{{ personal.count }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col">
+                  <!-- Tarjeta de ejemplo con datos -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Mantenimiento Realizado</h5>
+                      <p class="card-text">Total: <strong>{{ mantenimiento_realizado }}</strong></p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Máquina</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Realizado</th>
+                            <th scope="col">Responsable</th>
+                            <th scope="col">Autorizado</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for reporte in realizado %}
+                            <tr>
+                                <th scope="row"> {{ reporte.reporteId }} </th>
+                                <td> {{ reporte.maquina.nombre }} </td>
+                                <td> {{ reporte.tipo }} </td>
+                                <td> {{ reporte.realizado }} </td>
+                                <td> {{ reporte.responsable.nombre }} </td>
+                                <td> {{ reporte.autorizado }} </td>
+                                <td> <button type="button" class="btn btn-primary"><a href="{{ reporte.get_absolute_url }}" style="color: white;text-decoration: none;">Revisar rutina</a> </button> </td>
+                              </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Tarjeta de ejemplo con datos -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Mantenimiento Pendiente</h5>
+                      <p class="card-text">Total: <strong>{{ mantenimiento_no_realizado }}</strong></p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Máquina</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Realizado</th>
+                            <th scope="col">Responsable</th>
+                            <th scope="col">Autorizado</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for reporte in no_realizado %}
+                            <tr>
+                                <th scope="row"> {{ reporte.reporteId }} </th>
+                                <td> {{ reporte.maquina.nombre }} </td>
+                                <td> {{ reporte.tipo }} </td>
+                                <td> {{ reporte.realizado }} </td>
+                                <td> {{ reporte.responsable.nombre }} </td>
+                                <td> {{ reporte.autorizado }} </td>
+                                <td> <button type="button" class="btn btn-primary"><a href="{{ reporte.get_absolute_url }}" style="color: white;text-decoration: none;">Revisar rutina</a> </button> </td>
+                              </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col">
+                  <!-- Tarjeta de ejemplo con datos -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Mantenimiento Preventivo </h5>
+                      <p class="card-text">Total: <strong>{{ preventivo }}</strong></p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Máquina</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Realizado</th>
+                            <th scope="col">Responsable</th>
+                            <th scope="col">Autorizado</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for reporte in preventivo_orden %}
+                            <tr>
+                                <th scope="row"> {{ reporte.reporteId }} </th>
+                                <td> {{ reporte.maquina.nombre }} </td>
+                                <td> {{ reporte.tipo }} </td>
+                                <td> {{ reporte.realizado }} </td>
+                                <td> {{ reporte.responsable.nombre }} </td>
+                                <td> {{ reporte.autorizado }} </td>
+                                <td> <button type="button" class="btn btn-primary"><a href="{{ reporte.get_absolute_url }}" style="color: white;text-decoration: none;">Revisar rutina</a> </button> </td>
+                              </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Tarjeta de ejemplo con datos -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Mantenimiento Correctivo </h5>
+                      <p class="card-text">Total: <strong>{{ correctivo }}</strong></p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Máquina</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Realizado</th>
+                            <th scope="col">Responsable</th>
+                            <th scope="col">Autorizado</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for reporte in correctivo_orden %}
+                          <tr>
+                              <th scope="row"> {{ reporte.reporteId }} </th>
+                              <td> {{ reporte.maquina.nombre }} </td>
+                              <td> {{ reporte.tipo }} </td>
+                              <td> {{ reporte.realizado }} </td>
+                              <td> {{ reporte.responsable.nombre }} </td>
+                              <td> {{ reporte.autorizado }} </td>
+                              <td> <button type="button" class="btn btn-primary"><a href="{{ reporte.get_absolute_url }}" style="color: white;text-decoration: none;">Revisar rutina</a> </button> </td>
+                            </tr>
+                          {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Mantenimiento Predictivo </h5>
+                    <p class="card-text">Total: <strong>{{ predictivo }}</strong></p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Máquina</th>
+                          <th scope="col">Tipo</th>
+                          <th scope="col">Realizado</th>
+                          <th scope="col">Responsable</th>
+                          <th scope="col">Autorizado</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          {% for reporte in predictivo_orden %}
+                          <tr>
+                              <th scope="row"> {{ reporte.reporteId }} </th>
+                              <td> {{ reporte.maquina.nombre }} </td>
+                              <td> {{ reporte.tipo }} </td>
+                              <td> {{ reporte.realizado }} </td>
+                              <td> {{ reporte.responsable.nombre }} </td>
+                              <td> {{ reporte.autorizado }} </td>
+                              <td> <button type="button" class="btn btn-primary"><a href="{{ reporte.get_absolute_url }}" style="color: white;text-decoration: none;">Revisar rutina</a> </button> </td>
+                            </tr>
+                          {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Agrega más secciones de contenido y tarjetas según sea necesario -->
+            <!-- Sección de Gráficos -->
+            <div class="row mt-5">
+              <div class="col-6">
+                <!-- Incluye tu código de gráfico aquí -->
+                {{ context|safe }}
+              </div>
+              <div class="col-6">
+                <!-- Incluye tu código de gráfico aquí -->
+                <h2 class="text-center">Mantenimientos</h2>
+                {{ context2|safe }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+</section>
+
+{% endblock %}
+

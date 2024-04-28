@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section class="mantenimiento">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center mb-4">Reporte de Mantenimiento</h2>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Fecha:</th>
+                            <td>{{ orden.fecha }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hora:</th>
+                            <td>{{ orden.hora }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Maquina:</th>
+                            <td>{{ orden.maquina.nombre }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Responsable:</th>
+                            <td>{{ orden.responsable.nombre }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Actividad:</th>
+                            <td>{{ orden.actividad }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tipo de Mantenimiento:</th>
+                            <td>{{ orden.get_tipo_display }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Realizado:</th>
+                            <td>{{ orden.get_realizado_display }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Autorizado por:</th>
+                            <td>{{ orden.autorizado }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tiempo total:</th>
+                            <td>{{ orden.tiempo }} minutos</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Costo total:</th>
+                            <td>${{ orden.costo }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

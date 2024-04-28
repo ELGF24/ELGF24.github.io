@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section class="mantenimiento">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <h1 class="text-center">Rutinas de mantenimiento</h1>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Maquina</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Realizado</th>
+                        <th scope="col">Responsable</th>
+                        <th scope="col">Autorizado</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for reporte in reportes %}
+                        <tr>
+                            <th scope="row"> {{ reporte.reporteId }} </th>
+                            <td> {{ reporte.maquina.nombre }} </td>
+                            <td> {{ reporte.tipo }} </td>
+                            <td> {{ reporte.realizado }} </td>
+                            <td> {{ reporte.responsable.nombre }} </td>
+                            <td> {{ reporte.autorizado }} </td>
+                            <td> {{ reporte.fecha }} </td>
+                            <td> <button type="button" class="btn btn-primary"><a href="{{ reporte.get_absolute_url }}" style="color: white;text-decoration: none;">Revisar rutina</a> </button> </td>
+                          </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
