@@ -3,7 +3,7 @@
 ## Integrantes
 * Erik Lorenzo Gonzalez Fuentes
 * Marco Cesar Morales Morales
-* Sergio Gonzalez Lastirri
+* Sergio Gonzalez Lastiri
 
 ## Pasos para descargar el proyecto
 * Clonar el repositorio
