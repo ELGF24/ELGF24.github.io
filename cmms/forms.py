@@ -69,7 +69,7 @@ class OrdenForm(forms.Form):
         "id":"responsable"
     }))
 
-    actividad = forms.CharField(required=False, max_length=255, widget=forms.TextInput(
+    actividad = forms.CharField(required=False, widget=forms.TextInput(
         attrs={
             "class":"form-control",
             "placeholder":"Activity",

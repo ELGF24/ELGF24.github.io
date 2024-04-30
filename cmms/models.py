@@ -44,7 +44,7 @@ class OrdenDeMantenimiento(models.Model):
     hora = models.TimeField(verbose_name="hora", default=time)
     maquina = models.ForeignKey(Maquina, on_delete=models.CASCADE, related_name='ordenes_mantenimiento')
     responsable = models.ForeignKey(Personal, on_delete=models.CASCADE, related_name='ordenes_mantenimiento')
-    actividad = models.CharField(max_length=255, verbose_name="actividad")
+    actividad = models.CharField(verbose_name="actividad")
     tipo = models.CharField(max_length=20, choices=[('preventivo', 'Preventivo'), ('correctivo', 'Correctivo')], verbose_name="tipo")
     realizado = models.CharField(max_length=3, choices=CHOICES, verbose_name="realizado")
     autorizado = models.CharField(max_length=255, verbose_name="autorizado")

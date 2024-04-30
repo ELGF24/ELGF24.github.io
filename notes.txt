@@ -1,0 +1,116 @@
+Pasos del Mantenimiento:
+
+1- Inspección Visual:
+Se realizó una inspección visual detallada de todos los componentes eléctricos para detectar signos de desgaste, corrosión o daños visibles.
+2- Pruebas de Voltaje:
+Se realizaron pruebas de voltaje en todas las conexiones eléctricas para garantizar que estén dentro de los rangos aceptables y no haya fluctuaciones que puedan dañar los componentes.
+3- Limpieza:
+Se limpiaron todas las conexiones eléctricas y los paneles de control para eliminar el polvo, la suciedad y cualquier residuo que pueda afectar su rendimiento.
+4- Apriete de Conexiones:
+Se verificó y se apretaron todas las conexiones eléctricas para garantizar una conexión segura y evitar problemas de conexión intermitente.
+5- Revisión de Fusibles y Disyuntores:
+Se revisaron todos los fusibles y disyuntores para asegurarse de que estén en buenas condiciones y que puedan funcionar correctamente en caso de sobrecarga.
+6- Pruebas Funcionales:
+Se realizaron pruebas funcionales en todos los sistemas eléctricos para asegurarse de que funcionen correctamente y cumplan con las especificaciones del fabricante.
+
+Componentes Reemplazados:
+
+Fusibles: Se reemplazaron 10 fusibles estándar. Costo unitario: $5. Costo total: $50.
+Conectores Eléctricos: Se reemplazaron 5 conectores dañados. Costo unitario: $10. Costo total: $50.
+Disyuntores: Se reemplazó 1 disyuntor defectuoso. Costo unitario: $20. Costo total: $20.
+Cables Eléctricos: Se reemplazaron 20 metros de cable defectuoso. Costo unitario: $2/metro. Costo total: $40.
+
+
+Costo Total del Mantenimiento Preventivo en la Parte Eléctrica: $160
+
+
+
+*******************************************************************
+
+Resultados de la Inspección:
+
+1- Termografía Infrarroja:
+- Se detectaron puntos calientes en el panel de control XYZ, indicando posibles problemas de conexión o sobrecalentamiento.
+- Recomendación: Programar un mantenimiento para inspeccionar y ajustar las conexiones del panel.
+2- Análisis de Vibraciones:
+- Se registraron vibraciones anormales en el motor del equipo ABC, sugiriendo desgaste en los rodamientos.
+- Recomendación: Programar un reemplazo preventivo de los rodamientos del motor antes de que falle.
+3- Inspección por Ultrasonido:
+* Se identificaron fugas de aire en las juntas de los conductos de aire en el sistema de ventilación.
+* Recomendación: Reparar las juntas de los conductos para evitar pérdidas de energía y mantener la eficiencia del sistema.
+
+Acciones Recomendadas:
+
+Programar un mantenimiento para ajustar las conexiones del panel de control XYZ.
+Planificar el reemplazo preventivo de los rodamientos del motor del equipo ABC.
+Reparar las juntas de los conductos de aire en el sistema de ventilación para evitar pérdidas de energía.
+Costo Estimado de las Acciones Recomendadas:
+
+Mantenimiento del panel de control XYZ: $100
+Reemplazo de rodamientos del motor del equipo ABC: $200
+Reparación de juntas de conductos de aire: $50
+
+Costo Total del Mantenimiento Predictivo en la Parte Eléctrica: $350
+*****************************************************************************************
+Pasos del Mantenimiento:
+
+1- Inspección inicial:
+Verificar el funcionamiento general del sistema eléctrico.
+Identificar componentes defectuosos o dañados.
+2- Desmontaje y sustitución de componentes:
+Desconectar la alimentación eléctrica.
+Desmontar la cubierta o carcasa del equipo.
+Identificar y extraer los componentes defectuosos, como interruptores, fusibles, cables, etc.
+Sustituir los componentes defectuosos por nuevos.
+3- Pruebas de funcionamiento:
+Reconectar la alimentación eléctrica.
+Verificar el correcto funcionamiento del sistema.
+Realizar pruebas de carga si es necesario.
+Asegurarse de que no haya fugas de corriente ni cortocircuitos.
+4- Ajustes y calibración:
+Ajustar parámetros eléctricos según las especificaciones del fabricante.
+Calibrar sensores o dispositivos electrónicos si es necesario.
+5- Limpieza y mantenimiento preventivo:
+Limpiar el polvo y la suciedad acumulada en el interior del equipo.
+Aplicar lubricante en partes móviles si es necesario.
+Verificar y apretar conexiones eléctricas.
+
+Componentes Reemplazados:
+
+Interruptor principal: $200
+Fusibles (cantidad y especificación): $100
+Cableado dañado: $100
+Costo Total del Mantenimiento Correctivo: $400
+*********************************************************
+
+Descripción del Procedimiento de Mantenimiento Predictivo:
+
+Inspección Visual:
+Examinar visualmente todos los componentes eléctricos en busca de signos de desgaste, corrosión o daños físicos.
+Revisar las conexiones eléctricas en busca de cualquier indicio de aflojamiento o deterioro.
+Pruebas No Destructivas:
+Realizar pruebas de resistencia de aislamiento para identificar posibles problemas de aislamiento.
+Utilizar termografía infrarroja para detectar puntos calientes que puedan indicar conexiones defectuosas o componentes sobrecalentados.
+Realizar pruebas de continuidad para verificar la integridad de los circuitos eléctricos.
+Análisis de Tendencias:
+Recolectar datos de voltaje, corriente y otras variables eléctricas relevantes.
+Comparar los datos recolectados con valores históricos para identificar cualquier desviación significativa que pueda indicar un problema inminente.
+Mantenimiento Preventivo:
+Limpiar y lubricar componentes según sea necesario.
+Aplicar recubrimientos protectores o selladores en conexiones expuestas para prevenir la corrosión.
+Registro de Resultados:
+Documentar todos los hallazgos, incluyendo cualquier anomalía detectada y las acciones correctivas recomendadas.
+Hallazgos del Mantenimiento Predictivo:
+
+Resistencia de aislamiento dentro de los límites aceptables.
+Temperatura normal en todas las conexiones eléctricas.
+Continuidad verificada en todos los circuitos.
+Recomendaciones:
+[Incluir cualquier recomendación para futuras acciones de mantenimiento o reparaciones preventivas.]
+
+Costo Estimado del Mantenimiento Predictivo:
+
+Mano de obra: $XXX
+Equipos de prueba: $XXX
+Otros costos (si los hay): $XXX
+Costo Total Estimado del Mantenimiento Predictivo: $XXX

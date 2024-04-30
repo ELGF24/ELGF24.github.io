@@ -210,4 +210,33 @@ def ejecutivo(request):
     fig2 = go.Figure(data=[go.Pie(labels=labels, values=mantenimientos)])
     chart2 = fig2.to_html()
     fechas = [mant.fecha for mant in OrdenDeMantenimiento.objects.all()]
-    return render(request, "ejecutivo.html", {"context":chart, "context2":chart2, "fechas":fechas, "mantenimientos":OrdenDeMantenimiento.objects.all()})
+    
+    dates = []
+    costos = []
+    tipo = []
+    # Recorremos todas las órdenes de mantenimiento y almacenamos las fechas y costos
+    for orden in OrdenDeMantenimiento.objects.all():
+        if orden.tipo == "predictivo" or orden.tipo == "correctivo":
+            dates.append(orden.fecha)
+            costos.append(orden.costo)
+            tipo.append(orden.tipo)
+
+
+    # Creamos el DataFrame utilizando pandas
+    df = pd.DataFrame({
+        'Fecha': dates,
+        'Costo': costos,
+        "tipo":tipo
+    })
+
+    fig3 = px.scatter(
+        df,
+        x='Fecha', 
+        y='Costo', 
+        title="Comparación de Costos de Mantenimiento Predictivo y Correctivo",
+        color="tipo"
+        )
+    fig3.update_traces(marker_size=15)
+    chart3 = fig3.to_html()
+    
+    return render(request, "ejecutivo.html", {"context":chart, "context2":chart2, "context3":chart3 , "fechas":fechas, "mantenimientos":OrdenDeMantenimiento.objects.all()})
